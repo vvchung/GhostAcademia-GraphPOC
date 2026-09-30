@@ -1,0 +1,78 @@
+# ====================================================================
+# GhostAcademia-GraphPOC: .gitignore 科技偵查專案專用過濾設定
+# ====================================================================
+
+# 1. 偵查資料集與金流情資 (避免將受害學者名單、Email Logs 原始 CSV/Excel 上傳)
+*.csv
+*.xlsx
+*.xls
+*.json
+!modules.json
+!sentence_bert_config.json
+!config.json
+
+# 2. PyVis 互動式可視化報告 (Colab 產生的 HTML 關係圖網頁)
+*.html
+
+# 3. 機器學習 / 深度學習模型重量檔與大檔案 (PyG / BERT / PyTorch 權重)
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.joblib
+*.safetensors
+.huggingface/
+huggingface/
+huggingface_cache/
+
+# 4. Jupyter Notebook & Google Colab 系統暫存
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.virtualenv
+.env
+.venv
+env/
+venv/
+
+# 5. Python 標準編譯暫存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 6. 作業系統與 IDE 垃圾檔案 (Mac / Windows / VS Code)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# 7. 偵查紀錄與日誌檔
+*.log
